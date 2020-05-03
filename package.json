@@ -1,0 +1,23 @@
+{
+  "name": "renju",
+  "version": "0.0.0",
+  "description": "",
+  "main": "renju.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint '**/*.js' --quiet"
+  },
+  "keywords": [
+    "renju",
+    "gomoku",
+    "renju-engine"
+  ],
+  "author": "Daniel Martínez Vigo <danielmartinezvigo@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  },
+  "dependencies": {}
+}
