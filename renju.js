@@ -555,6 +555,22 @@ class Renju {
     }
     return -1;
   }
+
+  print() {
+    const markedMatrix = this.getMarkedMatrix();
+    markedMatrix.forEach((row) => {
+      // eslint-disable-next-line no-console
+      console.log(
+        row
+          .join('')
+          .replace(/\(\d+,\d+\)/g, '')
+          .replace(/\[/g, '')
+          .replace(/\]/g, '')
+          .split('')
+          .join(' '),
+      );
+    });
+  }
 }
 
 module.exports = Renju;
