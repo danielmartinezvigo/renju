@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - "12"
+script:
+  - jasmine
+  - istanbul cover --include-all-sources spec/specs.js && istanbul check-coverage
