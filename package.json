@@ -4,8 +4,9 @@
   "description": "",
   "main": "renju.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint '**/*.js' --quiet"
+    "test": "jasmine",
+    "lint": "eslint '**/*.js' --quiet",
+    "test-cover": "istanbul cover node_modules/jasmine/bin/jasmine.js --captureExceptions spec/errors-spec.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "keywords": [
     "renju",
@@ -17,7 +18,13 @@
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0"
-  },
-  "dependencies": {}
+    "eslint-plugin-import": "^2.16.0",
+    "istanbul": "^0.4.5",
+    "jasmine": "^2.99.0",
+    "jasmine-console-reporter": "^3.1.0",
+    "jasmine-node": "^3.0.0",
+    "jasmine-supertest": "^1.0.0",
+    "supertest": "^4.0.2",
+    "coveralls": "^3.1.0"
+  }
 }
