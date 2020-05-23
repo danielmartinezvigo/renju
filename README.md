@@ -21,21 +21,13 @@ const Renju = require('./renju');
 
 const game = new Renju();
 
-// B
 game.play(7, 7);
-// W
 game.play(7, 8);
-// B
 game.play(6, 7);
-// W
 game.play(8, 8);
-// B
 game.play(5, 6);
-// W
 game.play(9, 8);
-// B
 game.play(5, 8);
-// W
 game.play(10, 8);
 
 game.print();
