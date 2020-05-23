@@ -1,7 +1,7 @@
 {
   "name": "renju",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.2",
+  "description": "A Renju game engine.",
   "main": "renju.js",
   "scripts": {
     "test": "jasmine",

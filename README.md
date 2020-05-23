@@ -8,6 +8,8 @@ Renju
 
 ![](https://raw.githubusercontent.com/danielmartinezvigo/renju/master/renju.png)
 
+__[Live demo](https://danielmartinezvigo.github.io/renju-demo/#/)__
+
 # Installation
 
 `npm i renju`
