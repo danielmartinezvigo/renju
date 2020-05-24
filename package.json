@@ -1,6 +1,6 @@
 {
   "name": "renju",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Renju game engine.",
   "main": "renju.js",
   "scripts": {
@@ -26,5 +26,12 @@
     "jasmine-supertest": "^1.0.0",
     "supertest": "^4.0.2",
     "coveralls": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielmartinezvigo/renju.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danielmartinezvigo/renju/issues"
   }
 }
