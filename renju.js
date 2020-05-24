@@ -184,7 +184,7 @@ class Renju {
   /**
    * @constructs
    * @param {Object} [board]
-   * @param {number} [board.size=15] Board size, default 15
+   * @param {number} [board.size=15] Board size, min 6, max 100
    * @param {string[]} [board.rows] Rows, i.e.: 6x6 board
    * [
    *    '..W.B.',
@@ -510,8 +510,12 @@ class Renju {
   }
 
   /**
-   * @param {number} i Row
-   * @param {number} j Colum
+   * Receives a move.
+   * If the move is not valid then returns -1.
+   * If the move is valid and the game ends then modifies de board state and returns 1.
+   * If the move is valid but the game must continue then modifies de board state and returns 0.
+   * @param {number} i Row, >= 0, <= Board Size - 1
+   * @param {number} j Colum, >= 0, <= Board Size - 1
    * @return {number} -1 Forbidden, 0 Accepted, 1 Game is over
    */
   play(i, j) {
@@ -556,6 +560,9 @@ class Renju {
     return -1;
   }
 
+  /**
+   * Prints in console the board state.
+   */
   print() {
     const markedMatrix = this.getMarkedMatrix();
     markedMatrix.forEach((row) => {
@@ -568,6 +575,32 @@ class Renju {
         .split('')
         .join(' '));
     });
+  }
+
+  /**
+   * Returns the board state.
+   * @return {string[]}
+   */
+  getBoard() {
+    return this.getMarkedMatrix();
+  }
+
+  /**
+   * Returns 'B' if blacks player won.
+   * Returns 'W' if whites player won.
+   * Return null if no one won yet.
+   * @return {string}
+   */
+  getWinner() {
+    return this.winner;
+  }
+
+  /**
+   * Returns 'true' if the game ended in a tie.
+   * @return {boolean}
+   */
+  getDraw() {
+    return this.winner;
   }
 }
 
